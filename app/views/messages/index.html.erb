@@ -1,0 +1,8 @@
+<%= link_to "logout", logout_path, method: :delete %>
+
+<h3>Messages</h3>
+<div id="messages">
+</div>
+<span id="username"><%= session[:username] %></span>: <input placeholder="write your message"id="message-input"></input>
+<button id="message-button">send</button>
+
