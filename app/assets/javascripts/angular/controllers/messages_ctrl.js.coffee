@@ -5,7 +5,8 @@ App.controller 'MessagesCtrl', ['$scope', '$http', ($scope, $http) ->
   App.chatChannel = App.cable.subscriptions.create { channel: "ChatChannel", room: "UAChat" },
     # Append received messages to our html element
     received: (data) ->
-      $scope.messages.push(data)
+      $scope.$apply ->
+        $scope.messages.push(data)
     
     # Send new message to the backend
     sendMessage: (data) ->
