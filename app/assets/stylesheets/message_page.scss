@@ -2,6 +2,8 @@
   background-color: #EEEEEE !important;
 
   .menu-bar {
+    background-color: $v-color-primary;
+
     .logout-button {
       i.zmdi {
         font-size: 24px;
@@ -13,16 +15,15 @@
     max-width: 700px;
     height: 100%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: $v-color-base;
 
     .title-container {
       padding: 24px;
 
       h2 {
-        color: #707070;
+        color: $v-color-text-secondary;
         text-align: center;
         margin: 0;
-        text-transform: uppercase;
         font-weight: 400;
       }
     }
@@ -32,22 +33,40 @@
         img.user-avatar {
           margin-top: 22px;
         }
+
+        h3 {
+          color: $v-color-text-primary;
+        }
+
+        p {
+          color: $v-color-text-secondary;
+        }
+      }
+
+      .divider {
+        border-color: $v-color-divider;
       }
     }
 
     .send-message-container {
       padding: 0 16px 36px 16px;
 
+      label {
+        color: $v-color-text-secondary;
+      }
+
       input {
         width: calc(100% - 73px);
         display: inline-block;
         margin-top: 28px;
+        color: $v-color-text-primary;
       }
 
       button {
         display: inline-block;
         margin-left: 16px;
         margin-right: 0;
+        background-color: $v-color-accent;
 
         i.zmdi {
           font-size: 24px;

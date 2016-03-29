@@ -1,6 +1,6 @@
 <div ng-controller="HomeCtrl" layout="column" ng-cloak class="home-page-container">
   <div class="welcome-container">
-    <h1>welcome</h1>
+    <h1>Hello.</h1>
   </div>
   <div class="image-container"></div>
   <md-content layout-padding class="md-inline-form form-container">
@@ -8,7 +8,7 @@
       <%= form_tag("/login", method: 'post', name: 'userForm') do %>
         <div layout-gt-sm="row">
           <md-input-container class="md-block" flex-gt-sm>
-            <%= label_tag(:username, "Username:") %>
+            <%= label_tag(:username, "Username") %>
             <%= text_field_tag(:username) %>
           </md-input-container>
         </div>
