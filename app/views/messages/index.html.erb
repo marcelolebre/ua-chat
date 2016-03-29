@@ -1,8 +1,43 @@
-<%= link_to "logout", logout_path, method: :delete %>
+<div ng-controller="MessagesCtrl" ng-cloak class="message-page-container">
+  <md-toolbar class="menu-bar">
+    <div class="md-toolbar-tools">
+      <h2>
+        <span>UA Chat</span>
+      </h2>
+      <span flex></span>
+      <%= link_to logout_path, method: :delete, class: 'logout-button' do %>
+        <md-button class="md-icon-button" aria-label="Favorite">
+          <i class="zmdi zmdi-power"></i>
+        </md-button>
+      <% end %>
+    </div>
+  </md-toolbar>
 
-<h3>Messages</h3>
-<div id="messages">
+  <div class="content-container">
+    <div class="title-container">
+      <h2>Messages</h1>
+    </div>
+
+    <md-content class="messages-container">
+      <md-list flex>
+        <md-list-item class="md-3-line message" ng-repeat="entry in messages">
+          <img ng-src="https://api.adorable.io/avatars/100/{{entry.username}}@faber-dev.png" class="md-avatar user-avatar" alt="{{entry.username}}" />
+          <div class="md-list-item-text" layout="column">
+            <h3>{{entry.username}}</h3>
+            <p>{{entry.message}}</p>
+          </div>
+        </md-list-item>
+        <md-divider ></md-divider>
+      </md-list>
+    </md-content>
+
+    <md-content class="send-message-container">
+      <md-input-container md-no-float class="md-block">
+        <input ng-model="message" type="text" placeholder="Message" >
+        <md-button class="md-fab md-primary" aria-label="Send Message" ng-click="sendMessage()">
+          <i class="zmdi zmdi-mail-send"></i>
+        </md-button>
+      </md-input-container>
+    </md-content>
+  </div>
 </div>
-<span id="username"><%= session[:username] %></span>: <input placeholder="write your message"id="message-input"></input>
-<button id="message-button">send</button>
-

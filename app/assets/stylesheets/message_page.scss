@@ -1,0 +1,61 @@
+.message-page-container {
+  background-color: #EEEEEE !important;
+
+  .menu-bar {
+    .logout-button {
+      i.zmdi {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .content-container {
+    width: 700px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+
+    .title-container {
+      padding: 24px;
+
+      h2 {
+        color: #707070;
+        text-align: center;
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+
+    .messages-container {
+      .message {
+        img.user-avatar {
+          margin-top: 22px;
+        }
+      }
+    }
+
+    .send-message-container {
+      padding: 0 16px 36px 16px;
+
+      input {
+        width: calc(100% - 73px);
+        display: inline-block;
+        margin-top: 28px;
+      }
+
+      button {
+        display: inline-block;
+        margin-left: 16px;
+        margin-right: 0;
+
+        i.zmdi {
+          font-size: 24px;
+          position: relative;
+          top: 4px;
+          left: 3px;
+        }
+      }
+    }
+  }
+}

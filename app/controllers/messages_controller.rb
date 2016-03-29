@@ -5,7 +5,10 @@ class MessagesController < ApplicationController
  
   # Fetching last 10 messages, how cool is that when people don't respect conventions -.-'
   def show
-    messages = $firebase.get('messages', orderBy: '$key', limitToLast: 10)
-    render json: messages
+    data = {}
+    data['messages'] = $firebase.get('messages', orderBy: '$key', limitToLast: 10)
+    data['username'] = session[:username]
+    
+    render json: data
   end
 end
