@@ -1,0 +1,26 @@
+.home-page-container {
+  width: 700px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+
+  .welcome-container {
+    padding: 24px;
+    background-color: #fff;
+
+    h1 {
+      color: #707070;
+      text-align: center;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  }
+
+  .image-container {
+    background-image: image-url('icescream.png');
+    background-size: cover;
+    height: 240px;
+    background-position: 50% 50%;
+  }
+}
